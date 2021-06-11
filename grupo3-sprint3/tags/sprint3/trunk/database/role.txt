@@ -1,0 +1,3 @@
+{"nameRole":"Dev. Java Jr.","accessLevel":"BASIC"}
+{"nameRole":"Dev. Java pleno","accessLevel":"BASIC"}
+{"nameRole":"Humilde","accessLevel":"MEDIUM"}

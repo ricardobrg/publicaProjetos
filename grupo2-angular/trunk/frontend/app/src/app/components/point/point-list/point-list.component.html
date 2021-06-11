@@ -1,0 +1,75 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="page-header">
+        <div class="page-actions d-flex">
+            <h1 class="h3 mb-2 text-gray-800">Pontos</h1>
+            <a routerLink="/point-add">
+                <button class="btn btn-success btn-sm ml-1">Adicionar</button>
+            </a>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Pontos</li>
+                <li class="breadcrumb-item active" aria-current="page">Listagem de Ponto</li>
+            </ol>
+        </nav>    
+    </div>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Ponto</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table datatable [dtTrigger]="dtTrigger" class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Colaborador</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let point of responsePoints">
+                            <td>{{point.id}}</td>
+                            <td>{{point.collaborator.name}}</td>
+                            <td>{{point.date}}</td>
+                            <td>{{point.dayMinute  * 1000 * 60| date:'HH:mm':'UTC'}}</td>
+                            <td>
+                               
+                                <!--<i onclick="delete(point.id)" class="fas fa-trash"></i> -->
+                                <a routerLink="/point-list" (click)="delete(point.collaborator.id, point.id )"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Deletar Ponto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja deletar esse ponto?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm ml-1" data-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-success btn-sm ml-1" data-dismiss="modal">Sim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

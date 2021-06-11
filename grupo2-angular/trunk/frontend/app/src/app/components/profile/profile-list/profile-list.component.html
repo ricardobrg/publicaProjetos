@@ -1,0 +1,145 @@
+<style>
+    .nav-borders .nav-link {
+        color: #69707a;
+        border-bottom-width: 0.125rem;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-borders .nav-link.active {
+        color: #0061f2;
+        border-bottom-color: #0061f2;
+}
+</style>
+
+<div class="container mt-4">
+    <nav class="nav nav-borders" style="margin-left: 3%;">
+        <a class="nav-link active ml-0">Perfil</a>
+        <a class="nav-link" routerLink="/profile-point">Registro de Ponto</a>
+    </nav>
+    <hr class="mt-0 mb-4" style="margin-left: 3%;">
+
+    <div class="row" style="margin-left: 1%;">
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-header card bg-primary text-white"> Perfil</div>
+                <div class="card-body">
+                    <img class="img-account-profile rounded-circle mb-2" src="../../../assets/images/profile.svg" width="205rem" 
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-8">
+            <div class="card mb-4">
+                <div class="card-header">Informações</div>
+                <div class="card-body">
+                    <form *ngIf=profile id="profile">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputFirstName">Nome</label>
+                                <input id="name" class="form-control" value="{{profile.name}}" type="text"
+                                    disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputOrgName">CPF</label>
+                                <input id="cpf" class="form-control" type="text"
+                                  value="{{profile.cpf}}" disabled>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputRole">PIS</label>
+                                <input id="pis" class="form-control" type="text" value="{{profile.pis}}" disabled>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Cargo</label>
+                                <input id="role" class="form-control" type="text" value="{{profile.role.name}}"  disabled>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Departamento</label>
+                                <input id="department" class="form-control" type="text" value="{{profile.role.department.name}}" disabled>
+                            </div>
+                        </div>
+
+
+                        <hr class="mt-0 mb-4">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Data de Admissão</label>
+                                <input id="admissionDate" class="form-control" value="{{profile.admissionDate}}" type="tel" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Status férias</label>
+                                <input id="inVacation" class="form-control" type="tel" value="{{profile.inVacation}}" disabled>
+                                <!--Radiobutton-->
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Data das férias
+                                    anterior</label>
+                                <input id="lastVacation" class="form-control" type="tel" value="{{profile.lastVacation}}" disabled>
+                            </div>
+                        </div>
+                        <hr class="mt-0 mb-4">
+                        <h4>Contato</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Email</label>
+                                <input id="email" class="form-control" type="email" value="{{profile.contact.email}}"disabled>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Número de Telefone</label>
+                                <input id="phone" class="form-control" type="text" value="{{profile.contact.phone}}" disabled>
+                            </div>
+                        </div>
+                        <hr class="mt-0 mb-4">
+                        <h4>Endereço</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Rua</label>
+                                <input id="street" class="form-control" type="text" value="{{profile.address.street}}" disabled>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Bairro</label>
+                                <input id="district" class="form-control" type="text" value="{{profile.address.district}}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Cidade</label>
+                                <input id="locality" class="form-control" type="text" value="{{profile.address.locality}}"disabled>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">Estado</label>
+                                <input id="uf" class="form-control" type="text" value="{{profile.address.uf}}"disabled>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="small mb-1" for="inputPhone">CEP</label>
+                                <input id="cep" class="form-control" type="text" value="{{profile.address.cep}}"disabled>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

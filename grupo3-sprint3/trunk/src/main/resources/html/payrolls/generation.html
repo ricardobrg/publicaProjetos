@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar folha de pagamento</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/headers.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+    <style>
+        .mb-3 input[type=radio] {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/payroll/register.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <a href="../home.html">RH PÚBLICA</a>
+        <div class="logout">Olá, Pablo Raimundo
+            <a href="../login/auth.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white"
+                class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                <path fill-rule="evenodd"
+                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+            </svg>
+        </a>
+            </div>
+        </header>
+        
+        <main class="container">
+            
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Gerar Folha de Pagamento</h1>
+                    <hr>
+                </div>
+                
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="w-50" id="payrollForm" action="#" method="dialog" onsubmit="registerPayroll(event)">
+                        
+                        <div class="mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dataInicial" class="form-label">Data Inicial</label>
+                            <input type="date" class="form-control" name="initial_date" id="dataInicial">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dataFinal" class="form-label">Data Final</label>
+                            <input type="date" class="form-control" name="final_date" id="dataFinal">
+                        </div>
+                        <div class="mb-3">
+                            <label for="extra_hour_payment" class="form-label">Pagamento por Hora Extra</label>
+                            <input type="text" class="form-control" name="extra_hour_payment" id="extra_hour_payment">
+                        </div>
+                        
+                        <div class="discounts"></div>
+                        <hr style="height: 0.2rem;">
+                        <h5 class="mb-4">Descontos: </h5>
+                        <div id="discounts">
+                            
+                        </div>
+                        
+                        <div class="col-12">
+                            <label>Novo Desconto</label>
+                            <input type="button" class="btn btn-info" id="addDiscount" value="Adicionar">
+                        </div>
+                    </div>
+                    
+                    <div class="col-9 text-end">
+                        <button type="submit" class="btn btn-primary">GERAR</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <span>Grupo 3 © Proway - 2021</span>
+    </footer>
+    
+    <script src="../assets/js/payroll/payroll_discount.js"></script>
+</body>
+
+</html>

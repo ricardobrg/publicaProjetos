@@ -1,0 +1,7 @@
+#form-header {
+    justify-content: space-between;
+}
+
+#form-header button {
+    margin-left: 10px;
+}

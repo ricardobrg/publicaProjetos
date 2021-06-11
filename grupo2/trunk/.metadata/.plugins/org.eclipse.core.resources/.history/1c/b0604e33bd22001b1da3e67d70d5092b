@@ -1,0 +1,13 @@
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+
+public class MainTest {
+
+  @Test
+  public void validateCpfTest() {
+    String cpf = "12419231910";
+    boolean resultado = Main.validateCpf(cpf);
+    Assert.assertEquals(resultado, true); 
+    }
+}

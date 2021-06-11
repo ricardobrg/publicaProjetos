@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="collab_list.css">
+        <title>Listar colaboradores</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">Cargos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Colaboradores</a></li>
+                <li><a href="#">Prestadores de serviço</a></li>
+                <li><a href="#">Controle de férias</a></li>
+                <li><a href="#">Controle de ponto</a></li>
+                <li><a href="#">Folhas de pagamento</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <h3>User</h3>
+                <button>Logout</button>
+            </header>
+            <div>
+                <h2>Colaboradores</h2><hr>
+                <form>
+                    <label for="fname">Nome:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Sobrenome:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="cpf">CPF:</label><br>
+                    <input type="text" id="cpf" name="cpf"><br>
+                    <label for="adate">Data de admissão:</label><br>
+                    <input type="text" id="adate" name="adate"><br>
+                    <label for="user">Usuário:</label><br>
+                    <input type="text" id="user" name="user"><br>
+                    <label for="pass">Senha:</label><br>
+                    <input type="password" id="pass" name="pass"><br>
+                    <label for="role">Cargo:</label><br>
+                    <select id="role" name="role"><br>
+                        <option value="none">-- Select --</option>
+                        <option value="suporte">Suporte</option>
+                        <option value="suporte">RH</option>
+                        <option value="suporte">Desenvolvimento</option>
+                        <option value="suporte">Almoxarifado</option>
+                    </select><br>
+                    <label for="cellphone">Celular:</label><br>
+                    <input type="number" id="cellphone" name="cellphone"><br>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" name="mail"><br>
+                    <label for="cep">CEP:</label><br>
+                    <input type="number" id="cep" name="cep"><br>
+                    <label for="city">Cidade:</label><br>
+                    <input type="text" id="city" name="city"><br>
+                    <label for="district">Bairro:</label><br>
+                    <input type="text" id="district" name="district"><br>
+                    <label for="address">Endereço:</label><br>
+                    <input type="text" id="address" name="address"><br>
+                </form>
+            </div>
+            <footer>
+                Copyright © Your Website 2020
+            </footer>
+        </main>
+    </body>
+</html>

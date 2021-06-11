@@ -1,0 +1,35 @@
+<div class="edit-role-main">
+    <app-header></app-header>
+    <div class="edit-role">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Editar Cargo</h1>
+                    <hr>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="w-100" id="roleForm" [formGroup]="roleForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="name" id="name" formControlName="name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="accessLevel" class="form-label">Nivel de Acesso</label>
+                            <select class="w-75" name="accessLevel" id="accessLevel" formControlName="accessLevel">
+                                <option value="BASIC">Basico</option>
+                                <option value="MEDIUM">Médio</option>
+                                <option value="TOTAL">Total</option>
+                            </select>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary">SALVAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

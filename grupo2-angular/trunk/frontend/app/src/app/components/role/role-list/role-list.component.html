@@ -1,0 +1,56 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="page-header">
+        <div class="page-actions d-flex">
+            <h1 class="h3 mb-2 text-gray-800">Cargos</h1>
+            <a routerLink="/role-form">
+                <button class="btn btn-success btn-sm ml-1">Adicionar</button>
+            </a>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Cargos</li>
+                <li class="breadcrumb-item active" aria-current="page">Listagem de Cargos</li>
+            </ol>
+        </nav>    
+    </div>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Cargos</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table datatable [dtTrigger]="dtTrigger" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nível de Acesso</th>
+                            <th>Salário</th>
+                            <th>Departamento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let role of responseRoles">
+                            <td>{{role.name}}</td>
+                            <td>{{role.accessLevel}}</td>
+                            <td>R${{role.sal}}</td>
+                            <td>{{role.department?role.department.name:'Nenhum'}}</td>
+                            <td>
+                                <a routerLink="/role-edit/{{role.id}}">
+                                    <i class="fas fa-edit mr-1 edit-icon"></i>
+                                </a>
+                                <i (click)="delete(role.id)" class="fas fa-trash mr-1 delete-icon"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->

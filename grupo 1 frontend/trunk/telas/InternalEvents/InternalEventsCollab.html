@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Eventos Internos do Colaborador</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="InternalEventsCollab.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="crud.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>Eventos Internos</h2>
+            </div>
+            <div class="col-sm-6">
+              <div class="grid-search-field">
+                <span class="material-icons-outlined">search</span>
+                <input placeholder="Pesquisar" type="text" class="form-control" maxlength="30" required />
+              </div>
+            </div>
+          </div>
+        </div>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nome do Evento</th>
+              <th>Data</th>
+              <th>Início</th>
+              <th>Término</th>
+              <th>Endereço</th>
+              <th>Organizador</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://image.freepik.com/vetores-gratis/placa-de-direcao-direta_23-2148663366.jpg" alt="" height=80 width=80  margin-left=15px margin-right=15px ></img></td>
+              <td>Drive Thru 28 anos Pública</td>
+              <td>01/02/2021</td>
+              <td>18:00</td>
+              <td>20:00</td>
+              <td>Perto da Cremer</td>
+              <td>Cleilson</td>
+              <td>Evento</td>
+            </tr> 
+            <tr>
+              <td><img src="https://static.wixstatic.com/media/71a6c2_bddf371813b546a7834c252183473600~mv2.png" alt="" height=80 width=80></img></td>
+              <td>Deep House Night</td>
+              <td>08/02/2021</td>
+              <td>20:00</td>
+              <td>05:00</td>
+              <td>Perto da Cremer</td>
+              <td>Cleilson</td>
+              <td>Evento</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="clearfix">
+          <div class="hint-text">
+            Mostrando <b>2</b> de <b>10</b> Eventos
+          </div>
+          <ul class="pagination">
+            <li class="page-item disabled"><a href="#">Anterior</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item active">
+              <a href="#" class="page-link">3</a>
+            </li>
+            <li class="page-item"><a href="#" class="page-link">4</a></li>
+            <li class="page-item"><a href="#" class="page-link">5</a></li>
+            <li class="page-item">
+              <a href="#" class="page-link">Próxima</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

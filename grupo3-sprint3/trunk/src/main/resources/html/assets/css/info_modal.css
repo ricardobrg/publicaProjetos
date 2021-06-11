@@ -1,0 +1,10 @@
+#data_modal .modal-dialog {
+    width: fit-content;
+}
+#data_modal_table th {
+    padding-right: 2rem;
+    text-align: right;
+}
+#data_modal_table td {
+    text-align: left;
+}

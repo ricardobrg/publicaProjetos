@@ -1,0 +1,77 @@
+<div class="register-collab-main">
+    <app-header></app-header>
+    <div class="register-collab">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Cadastro de Colaborador</h1>
+                    <hr>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+
+                    <form class="w-75"  [formGroup]="collaboratorForm">
+
+                        <div class="mb-3">
+                            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nomeCompleto" name="name" formControlName="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf" formControlName="cpf">
+                        </div>
+                        <div formGroupName="contact">
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="telefone" name="telephone" formControlName="telephone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-labeld">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" formControlName="email">
+                            </div>
+                        </div>
+                        <div class="mb-3" formGroupName="endereco">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="cep" name="cep" formControlName="cep">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pis" class="form-label">PIS</label>
+                            <input type="text" class="form-control" id="pis" name="pis" formControlName="pis">
+                        </div>
+                        <div class="mb-3" formGroupName="role">
+                            <label for="cargo" class="form-label">Cargo</label>
+                            <select class="w-75" name="id" id="cargo" formControlName="id">
+                                <option *ngFor="let role of roles" value="{{role.id}}" default>{{role.name}}</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="salario" class="form-label">Salário</label>
+                            <input type="number" class="form-control" id="salario" name="salary" formControlName="salary">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cargaHoraria" class="form-label">Carga Horária</label>
+                            <input type="number" class="form-control" id="cargaHoraria" name="workHours" formControlName="workHours">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dataAdmissao" class="form-label">Data de Adimissão</label>
+                            <input type="date" class="form-control" id="dataAdmissao" name="admissionDate" formControlName="admissionDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" name="pwdHash" formControlName="pwdHash">
+                        </div>
+                        <div class="col-12 text-end">
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary">SALVAR</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

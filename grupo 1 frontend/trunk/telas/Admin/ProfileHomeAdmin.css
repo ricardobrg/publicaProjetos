@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.row {
+  padding-bottom: 5vh;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.row>* {
+  padding-right: 0;
+}
+
+.col {
+  padding-bottom: 1vh;
+}
+
+.cedula {
+  width: 20vw;
+}
+
+#rowcontainer {
+  height: 100vh;
+}
+
+
+button {
+  box-sizing:border-box;
+  background-color: #FAFAFA;
+  
+  height: 7vw;
+  width: 7vw;
+  
+  border: 2vh;
+  border-radius: 20%;
+  
+  margin:auto;
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 15%;
+  
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.06);
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: 0px;
+}
+
+button:hover {
+  background-color: #f1f1f1;
+}
+
+#backBtn {
+  background-color: #CC1D33;
+}
+
+#leave:hover {
+  background-color: #b41c30;
+}
+
+h4 {
+  font-size: 1.6vw;
+  max-width: 100%;
+}
+
+.material-icons-outlined {
+  font-size: 16px;
+  font-size: 4.5vw;
+}

@@ -1,0 +1,12 @@
+.card {
+    width: 18rem; width: 60vh; margin: 2rem .5rem;
+}
+
+img {
+    height:200px;
+    object-fit:cover;
+}
+
+.modal-here-modify {
+    margin-bottom: 2rem;
+}

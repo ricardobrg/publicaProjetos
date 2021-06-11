@@ -1,0 +1,74 @@
+<div class="list-payrolls-main">
+    <app-header></app-header>
+    <div class="list-payrolls">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="title text-center">
+                    <h1>Lista de Folhas</h1>
+                    <hr>
+                </div>
+    
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="registries_table" class="display">
+                    <thead>
+                        <tr>
+                          <th>Data Inicial</th>
+                          <th>Data Final</th>
+                          <th>Valor Final</th>
+                          <th>Ações</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let entry of entries">
+                          <td>{{ entry.initDate }}</td>
+                          <td>{{ entry.finalDate }}</td>
+                          <td>{{ entry.netSalary }}</td>
+                          <td><button      
+                              (click)="viewDiscounts(entry.id)"                         
+                              data-bs-toggle="modal" 
+                              data-bs-target="#discounts_modal">
+                              Listar Descontos
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    
+    <div class="modal fade" id="discounts_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="modalLabel">Descontos</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <table datatable [dtOptions]="dtOptionsDiscounts" [dtTrigger]="dtTriggerDiscounts" id="discounts_table" class="display">
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngIf="discounts">
+                      <tr *ngFor="let discount of discounts">
+                        <td>{{ discount.name }}</td>
+                        <td>{{ discount.value }}</td>
+                        <td>{{ discount.type }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

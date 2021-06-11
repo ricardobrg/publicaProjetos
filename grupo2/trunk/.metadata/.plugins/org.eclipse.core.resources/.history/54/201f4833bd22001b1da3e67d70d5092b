@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+
+public class Main {
+	public static void Main(String[] args) {
+		validateCpf("12419231910");
+	}
+		
+	public static boolean validateCpf(String cpf) {  
+		int[] verificarCpf = new int[11];
+			
+		boolean resultadobool= false;
+			
+		Double.parseDouble(cpf);
+		ArrayList<Integer> lista = new ArrayList<>();
+		String cpfSplit = cpf.substring(0,9);
+		String[] vetor = new String[9];
+		int contador = 10;
+		int soma = 0;
+			
+		ArrayList<Integer> lista2 = new ArrayList<>();
+		String cpfSplit2 = cpf.substring(0,10);
+		String[] vetor2 = new String[10];
+		int contador2 = 11;
+		int soma2 = 0;
+		
+		for (int i = 0; i < cpfSplit.length(); i++) {
+			int resultado = Integer.parseInt(String.valueOf(cpfSplit.charAt(i)))*contador;
+			lista.add(resultado);
+			contador--;
+		
+		}
+			
+		for (int j = 0; j<lista.size(); j++) {
+			soma +=lista.get(j);
+		}
+		int result = soma * 10 % 11;
+			
+		if (cpf.equals("00000000000") || cpf.equals("11111111111") ||
+	       cpf.equals("22222222222") || cpf.equals("33333333333") ||
+	       cpf.equals("44444444444") || cpf.equals("55555555555") ||
+	       cpf.equals("66666666666") || cpf.equals("77777777777") ||
+	       cpf.equals("88888888888") || cpf.equals("99999999999") ||
+	      (cpf.length() != 11)){
+	    	  System.out.println("CPF inválido");
+	      }
+		else {
+			if(result == (Integer.parseInt(String.valueOf(cpf.charAt(9))))) {
+				System.out.println("Primeiro dv válido");
+				for (int i = 0; i < cpfSplit2.length(); i++) {
+					int resultado = Integer.parseInt(String.valueOf(cpfSplit2.charAt(i)))*contador2;
+					lista2.add(resultado);
+					contador2--;
+				}
+					
+				for (int j = 0; j<lista2.size(); j++) {
+					soma2 +=lista2.get(j);
+				}
+		
+				int result2 = soma2 * 10 % 11;
+		
+					
+				if(result2 == (Integer.parseInt(String.valueOf(cpf.charAt(10))))) {
+					System.out.println("Segundo dv válido");
+					System.out.println("O CPF " + cpf + " é válido");
+					resultadobool= true;
+					return resultadobool;
+						
+				}
+			
+			}
+			else {
+				System.out.println("CPF inválido");
+				resultadobool= false;
+				return resultadobool;
+					
+			}
+			return resultadobool;
+
+	}
+		return resultadobool;
+
+}
+}

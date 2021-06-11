@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    width: 1102px;
+    height: 848px;
+    position: fixed;
+    left: 176px;
+}
+
+main header {
+    width: 1102px;
+    height: 70px;
+    position: fixed;
+    left: 176px;
+    justify-content: flex-end;
+}
+
+main header h3 {
+    width: 50px;
+    float: left;
+    display: flex;
+}
+
+main header button {
+    width: 50px;
+    display: grid;
+}
+
+main div {
+    width: 1102px;
+    height: 778px;
+    position: fixed;
+    top: 70px;
+}
+
+main div h2 {
+    width: 165px;
+    display: flex;
+    margin-left: 40px;
+    float: left;
+}
+
+main div table {
+    position: fixed;
+    top: 125px;
+    left: 235px;
+    float: left;
+    width: 975px;
+    height: 695px;
+}
+
+hr {
+    position: fixed;
+    left: 200px;
+    width: 1050px;
+    top:100px;
+}
+main footer {
+    background-color: gray;
+    width: 1102px;
+    height: 65px;
+    top: 848px;
+    position: fixed;
+    justify-content: center;
+}
+
+main footer h4 {
+    padding-top: 23px;
+    text-align: center;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+}
+
+.sidebar{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(65, 122, 207);
+    overflow-x: hidden;
+
+}
+
+.sidebar ul {
+    list-style-type:none;
+    padding-top: 30px;
+}
+
+.sidebar li {
+    padding-top: 30px;
+}
+
+.sidebar a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color:white;
+}
+
+.center{
+    text-align: center;
+}

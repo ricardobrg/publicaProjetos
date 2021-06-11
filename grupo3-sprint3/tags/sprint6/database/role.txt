@@ -1,0 +1,5 @@
+{"id":0,"name":"Humilde","accessLevel":"BASIC"}
+{"id":2,"name":"Java","accessLevel":"BASIC"}
+{"id":4,"name":"meu","accessLevel":"BASIC"}
+{"id":4,"name":"meu","accessLevel":"BASIC"}
+{"id":0,"name":"Cargp","accessLevel":"MEDIUM"}

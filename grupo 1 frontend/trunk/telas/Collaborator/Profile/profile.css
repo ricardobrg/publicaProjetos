@@ -1,0 +1,96 @@
+body{
+    margin-top:20px;
+    margin-bottom: 40px;
+    background: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ui-w-100 {
+    width: 100px !important;
+    height: auto;
+}
+
+.card {
+    background-clip: padding-box;
+    background-color: #FAFAFA;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+}
+
+.table-responsive {
+    padding-bottom: 15px;
+}
+
+.user-view-table td:first-child {
+    width: 9rem;
+}
+.user-view-table td {
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.card .row-bordered>[class*=" col-"]::after {
+    border-color: rgba(24,28,33,0.075);
+}    
+
+.text-xlarge {
+    font-size: 170% !important;
+}
+
+/* Modal styles */
+.modal .modal-dialog {
+	max-width: 500px;
+}
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+	padding: 10px 20px;
+}
+
+.modal .modal-subheader {
+    padding: 20px 30px 0px 0px;
+}
+
+.modal .modal-content {
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+
+.modal .modal-footer {
+	border-radius: 0 0 3px 3px;
+}
+
+.modal .modal-footer {
+	border-radius: 0 0 3px 3px;
+}
+
+.modal .modal-subtitle {
+   color: #505050;
+}
+
+.modal .modal-title, .modal .modal-subheader {
+	display: inline-block;
+}
+
+.modal .form-control {
+	border-radius: 2px;
+	box-shadow: none;
+	border-color: #dddddd;
+}
+.modal .btn {
+	border-radius: 3px;
+	min-width: 100px;
+}	
+
+.modal form label {
+	font-weight: normal;
+}	
+
+.hr-edit {
+    margin: 0px 0px 1rem 0px;
+    border: .5px solid #505050;
+}

@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="page-header">
+        <div class="page-actions d-flex">
+            <h1 class="h3 mb-2 text-gray-800">Folhas de Pagamento</h1>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Folhas de Pagamento</li>
+            </ol>
+        </nav>    
+    </div>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Folhas de Pagamento</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table datatable [dtTrigger]="dtTrigger" class="row-border hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Data de Emissão</th>
+                            <th>Ações</th>
+                            
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Data de Emissão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let payroll of responsePayrolls">
+                            <td>{{payroll.id}}</td>
+                            <td>{{payroll.collaborator.name}}</td>
+                            <td>{{payroll.timeLog}}</td>
+                            <td>
+                                <a routerLink="/discounts.html?id={{payroll.id}}"><i class="fas fa-edit edit-icon"></i></a>
+                                <a (click)="delete(payroll.id)" style="padding-left: 10%;" onclick=""><i class="fas fa-trash delete-icon"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+</div>

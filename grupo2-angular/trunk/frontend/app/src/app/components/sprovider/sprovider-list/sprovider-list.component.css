@@ -1,0 +1,18 @@
+.delete-icon {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.delete-icon:hover{
+    color: red;
+    transition: 0.3s;
+}
+
+.edit-icon {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.edit-icon:hover{
+    color: #36e0c1;
+    transition: 0.3s;
+}
+

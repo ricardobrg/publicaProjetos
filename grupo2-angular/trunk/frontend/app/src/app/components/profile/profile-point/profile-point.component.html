@@ -1,0 +1,70 @@
+<style>
+    .nav-borders .nav-link {
+        color: #69707a;
+        border-bottom-width: 0.125rem;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-borders .nav-link.active {
+        color: #0061f2;
+        border-bottom-color: #0061f2;
+}
+</style>
+
+
+<div class="container-fluid">
+    <div class="container mt-4">
+        <nav class="nav nav-borders" style="margin-left: 3%;">
+            <a class="nav-link ml-0" routerLink="/profile-list">Perfil</a>
+            <a class="nav-link active" routerLink="/profile-point">Registro de Ponto</a>
+        </nav>
+        <hr class="mt-0 mb-4" style="margin-left: 3%;">
+
+
+        <div class="row" style="margin-left: 1%;">
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-header card bg-primary text-white"> Perfil</div>
+                    <div class="card-body">
+                        <img class="img-account-profile rounded-circle mb-2" src="../../../assets/images/profile.svg" width="205rem" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-8">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table datatable [dtTrigger]="dtTrigger" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Colaborador</th>
+                                        <th>Data</th>
+                                        <th>Horário</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let point of responsePoints">
+                                        <td>{{point.id}}</td>
+                                        <td>{{point.collaborator.name}}</td>
+                                        <td>{{point.date}}</td>
+                                        <td>{{point.dayMinute * 1000 * 60| date:'HH:mm':'UTC'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Cadastro de Collaborador</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex" id="form-header">
+            <h5 class="m-0 font-weight-bold text-primary">Cadastro de Colaborador</h5>
+            <div>
+                <button type="button" (click)="saveForm()" class="btn btn-success">
+                    Salvar
+                </button>
+                <a routerLink="/collab-list">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="personalForm">
+                <h3>Dados Pessoais</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" formControlName="name" placeholder="Nome">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input placeholder="CPF" type="text" formControlName="cpf" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input formControlName="admissionDate" type="date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <select formControlName="role" aria-placeholder="Cargo" data-name="role" class="form-control form-input">
+                            <option selected value="0">Select a Role</option>
+                            <option *ngFor="let item of roles" value="{{ item.id }}">{{ item.name }}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input formControlName="pis" type="text" class="form-control " placeholder="PIS">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input formControlName="password" type="password" class="form-control " placeholder="Senha">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="password" class="form-control " placeholder="Confirme sua senha">
+                    </div>
+                </div>
+
+                <hr>
+                <h3>Contato</h3>
+                <div formGroupName="contact" class="form-row">
+                    <div class="form-group col-md-6">
+                        <input formControlName="email" type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input formControlName="phone" type="text" class="form-control" placeholder="Telefone">
+                    </div>
+                </div>
+
+                <hr>
+                <h3>Endereço</h3>
+                    <div formGroupName="address">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <input type="text" formControlName="cep" (focusout)="findAddresWithCep()" class="form-control " placeholder="CEP">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="text" formControlName="uf" placeholder="UF" class="form-control">
+                                <!-- TODO: use api to till this field -->
+                                <!-- <select data-name="uf" formControlName="uf" class="form-control">
+                                    <option selected value="">Select UF</option>
+                                </select> -->
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input formControlName="city" type="text" class="form-control" placeholder="Cidade">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input formControlName="number" type="number" class="form-control" placeholder="Número">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input formControlName="district" type="text" class="form-control" placeholder="Estado">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input formControlName="street" type="text" class="form-control" placeholder="Rua">
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                            <input formControlName="complement" data-name="complement" class="form-control" placeholder="Complemento">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

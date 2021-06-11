@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="page-header">
+        <div class="page-actions d-flex">
+            <h1 class="h3 mb-2 text-gray-800">Colaboradores</h1>
+            <a routerLink="/collab-add">
+                <button class="btn btn-success btn-sm ml-1">Adicionar</button>
+            </a>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Colaboradores</li>
+                <li class="breadcrumb-item active" aria-current="page">Listagem de Colaboradores</li>
+            </ol>
+        </nav>    
+    </div>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Colaboradores</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table datatable [dtTrigger]="dtTrigger" class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Data de Admissão</th>
+                        <th>Cargo</th>
+                        <th>De Férias</th>
+                        <th>Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of collabs">
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.cpf }}</td>
+                            <td>{{ item.admissionDate?item.admissionDate:'Nenhum' }}</td>
+                            <td>{{ item.role?item.role.name:'Nenhum' }}</td>
+                            <td>{{ item.inVacation?'Sim':'Não' }}</td>
+                            <td>
+                                <i class="fas fa-edit mr-1"></i>
+                                <i (click)="deleteCollab()" class="fas fa-trash delete-icon"></i>
+                                <i (click)="generatePayroll(item.id)" style="padding-left: 10%; cursor: pointer;" class="fas fa-clipboard-list"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+</div>

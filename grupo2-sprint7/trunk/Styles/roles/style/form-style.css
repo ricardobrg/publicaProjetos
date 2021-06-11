@@ -1,0 +1,9 @@
+.page-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.page-form{
+    margin-top: 10px;
+}

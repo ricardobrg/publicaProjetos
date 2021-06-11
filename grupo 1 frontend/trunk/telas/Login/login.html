@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="login.css" rel="stylesheet" id="bootstrap-css">
+</head>
+
+<body>
+    <div class="card card-container">
+        <div class="card-header-container">
+            <a class="login-header" data-toggle="modal">
+                <i class="material-icons">&#xea77;</i></a>
+            <h5>Inicie sua sessão</h5>
+        </div>
+        <form class="form-signin">
+            <input type="text" id="inputCpf" class="form-control" placeholder="CPF" required autofocus>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+            <button id="loginBtn" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar </button>
+        </form><!-- /form -->
+    </div><!-- /card-container -->
+
+    <script src="login.js"></script>
+</body>
+
+</html>

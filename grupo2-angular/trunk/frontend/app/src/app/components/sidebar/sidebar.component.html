@@ -1,0 +1,79 @@
+<ul id="sidebar" *ngIf="!(location === '/login')"
+class="navbar-nav bg-gradient-primary sidebar sidebar-dark d-md-block">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/">
+        <div class="sidebar-brand-text mx-3">Sistema RH</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" routerLink="/">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a routerLink="collab-list" class="nav-link collapsed" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-users"></i>
+            <span>Colaboradores</span>
+        </a>
+
+        <a routerLink="department-list" class="nav-link collapsed" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-stream"></i>
+            <span>Departamentos</span>
+        </a>
+
+        <a routerLink="sprovider-list" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-people-carry"></i>
+            <span>Prestadores de Serviço</span>
+        </a>
+
+        <a routerLink="vacation" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-plane-departure"></i>
+            <span>Controle de Férias</span>
+        </a>
+
+
+        <a routerLink="point-list" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-cash-register"></i>
+            <span>Controle de Ponto</span>
+        </a>
+
+
+        <a routerLink="payroll" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-file-invoice"></i>
+            <span>Folha de Pagamento</span>
+        </a>
+
+        <a routerLink="role-list" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="far fa-address-book"></i>
+            <span>Cargos</span>
+        </a>
+
+        <a routerLink="event-list" class="nav-link collapsed" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-glass-cheers"></i>
+            <span>Eventos</span>
+        </a>
+
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+</ul>

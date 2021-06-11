@@ -1,0 +1,33 @@
+<div class="list-workentries-main">
+    <app-header></app-header>
+    <div class="list-workentries">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="title text-center">
+                    <h1>Lista de Pontos</h1>
+                    <hr>
+                </div>
+    
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="registries_table" class="display">
+                    <thead>
+                        <tr>
+                          <th>Data</th>
+                          <th>Horário</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let entry of entries">
+                          <td>{{ entry.date }}</td>
+                          <td>{{ entry.time }}</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

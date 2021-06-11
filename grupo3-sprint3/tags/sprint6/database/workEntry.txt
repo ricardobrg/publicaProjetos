@@ -1,0 +1,12 @@
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":6},{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":6}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"19616084054"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":9},{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":9}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"89549584003"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":11},{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":8,"minute":38,"second":11}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"29537453006"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":13,"minute":52,"second":21}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":13,"minute":57,"second":5}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":15,"minute":8,"second":37}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":27,"second":51}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"71399155040"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":31,"second":25}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":32,"second":52}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":38,"second":26}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":38,"second":55}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}
+{"day":[{"year":2020,"month":10,"dayOfMonth":24,"hourOfDay":17,"minute":40,"second":9}],"month":[],"collaborator":{"workHours":0,"salary":0.0,"cpf":"08238433940"}}

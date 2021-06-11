@@ -1,0 +1,52 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Cargos</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex" id="form-header">
+            <h5 class="m-0 font-weight-bold text-primary">Cadastro de Cargo</h5>
+            <div>
+                <button (click)="saveData()" type="button" class="btn btn-success">
+                    Salvar
+                </button>
+                <a routerLink="/role-list">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
+            </div>
+        </div>   
+        <div class="card-body">
+            <form [formGroup]="roleForm">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="text" placeholder="Nome" class="form-control" formControlName="name">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleInputEmail1">Salário</label>
+                        <input type="number" placeholder="Salário" class="form-control" formControlName="sal" value="request.sal">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleFormControlSelect1">Nível de Acesso</label>
+                        <select formControlName="accessLevel" class="form-control form-input" data-name="accessLevel" value="request.accessLevel">
+                            <option value="TOTAL">Total</option>
+                            <option value="ADVANCED">Avançado</option>
+                            <option value="BASIC">Básico</option>
+                            <option value="ADMIN">Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleFormControlSelect1">Departamento</label>
+                        <select formControlName="department" data-name="department" class="form-control form-input" value="request.department">
+                            <option value="null">Selecione uma opção</option>
+                            <option *ngFor="let department of departments" value="{{ department.id }}">{{ department.name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

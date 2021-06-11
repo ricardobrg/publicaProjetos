@@ -1,0 +1,63 @@
+<div class="register-provider-main">
+    <app-header></app-header>
+    <div class="register-provider">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Cadastro de Prestador de Serviço</h1>
+                    <hr>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+
+                    <form class="w-75" [formGroup]="providerForm">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" formControlName="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" name="cnpj" formControlName="cnpj">
+                        </div>
+                        <div formGroupName="contact">
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="telefone" name="telephone"
+                                    formControlName="telephone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-labeld">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    formControlName="email">
+                            </div>
+                        </div>
+                        <div class="mb-3" formGroupName="endereco">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="cep" name="cep" formControlName="cep">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="socialReason" class="form-label">Razao Social</label>
+                            <input type="text" class="form-control" id="socialReason" name="socialReason"
+                                formControlName="socialReason">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrição</label>
+                            <input type="text" class="form-control" id="description" name="description"
+                                formControlName="description">
+                        </div>
+
+
+                        <div class="col-12 text-end">
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary">SALVAR</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

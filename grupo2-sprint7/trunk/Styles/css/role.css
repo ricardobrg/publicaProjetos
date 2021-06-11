@@ -1,0 +1,50 @@
+main {
+    margin: 0;
+    margin-left: 240px;
+    padding: 0;
+}
+
+table {
+    width: 90%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table td{
+    border: 1px solid black;
+    padding: 5px 0px;
+}
+
+footer {
+    background-color: #DCDCDC;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-content {
+    margin: 30px 0px ;
+}
+
+.page-header {
+    display: flex;
+    margin: 0px 30px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.page-header h1{
+    margin: 0px 0px;
+}
+
+.role-search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}

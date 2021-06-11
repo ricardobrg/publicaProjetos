@@ -1,0 +1,7 @@
+:host {
+    width: 100%;
+}
+
+.logout-button {
+    cursor: pointer;
+}

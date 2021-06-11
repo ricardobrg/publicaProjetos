@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="alinhar">
+        <!-- <img role="button" data-toggle="modal" data-target="#exampleModal" src="/img/insert.png" -->
+        <h1 class="h3 mb-2 text-gray-800">Controle de Ponto</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xl-8">
+            <div class="card mb-4">
+                <div class="card-header card bg-primary text-white">Registrar Ponto</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Colaboradores</label>
+                                    <select aria-placeholder="Collaborador"
+                                        data-name="collaborator" class="form-control form-input">
+                                        <option>{{ loggedName }} </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="buttonSubmit" (click)="saveForm()" class="btn btn-success">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

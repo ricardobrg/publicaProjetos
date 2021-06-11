@@ -1,0 +1,4 @@
+{"socialReason":"razao social","cnpj":"06.601.912/0001-03","name":"Prestador de servicos","email":"email@email.com","phone":"67998070625","id":0}
+{"cnpj":"83411584000115","name":"Nome de teste","email":"email@email.com","phone":"4740028922","id":0}
+{"socialReason":"Razão social","cnpj":"83411584000115","name":"Nome de teste","email":"email@email.com","phone":"4740028922","id":0}
+{"socialReason":"Razão social","cnpj":"83411584000115","name":"Nome de teste","email":"email@email.com","phone":"4740028922","id":0}

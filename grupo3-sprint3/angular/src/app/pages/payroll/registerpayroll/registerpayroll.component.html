@@ -1,0 +1,73 @@
+<div class="register-payroll-main">
+    <app-header></app-header>
+    <div class="register-payroll">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Gerar Folha de Pagamento</h1>
+                    <hr>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="w-100" id="payrollForm" [formGroup]="payrollForm">
+                        <div class="mb-3"  formGroupName="collaborator">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf" formControlName="cpf">
+                        </div>
+                        <div class="mb-3">
+                            <label for="initial_date" class="form-label">Data Inicial</label>
+                            <input type="date" class="form-control" name="initial_date" id="initial_date"
+                                formControlName="initDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="final_date" class="form-label">Data Final</label>
+                            <input type="date" class="form-control" name="final_date" id="final_date"
+                                formControlName="finalDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="extra" class="form-label">Pagamento Por Hora Extra</label>
+                            <input type="text" class="form-control" name="extra" id="extra" formControlName="extra">
+                        </div>
+                        <div class="discounts">
+                            <hr style="height: 0.2rem;">
+                            <h5 class="mb-4">Descontos: </h5>
+                            <div formArrayName="discounts">
+                                <div *ngFor="let discount of discounts.controls; let i=index" [formGroupName]="i" class="discount-block">
+
+                                    <div class="mb-3">
+                                        <label for="discount_name" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" name="name" id="discount_name" formControlName="name">
+                                    </div>
+                                    
+                                    <div class="mb-3"> 
+                                        <label for="value" class="form-label">Valor</label>
+                                        <input type="text" class="form-control"  name="value" id="value" formControlName="value">
+                                    </div>
+                                    
+                                    <div class="col-12 mb-3 mt-3 align-items-center">
+                                        <label for="percentage_type" class="form-label">Percentual</label>
+                                        <input type="radio" name="type" id="percentage_type" formControlName="type"
+                                            value="1">
+                                        <label for="fixed_type" class="form-label ms-3">Fixo</label>
+                                        <input type="radio" name="type" id="fixed_type" formControlName="type"
+                                            value="0">
+                                    </div>
+                                    <button class="btn btn-danger" (click)="removeDiscount(i)">Remover Desconto</button>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button (click)="addDiscount()" class="btn btn-success">Adicionar Desconto</button>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary">GERAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

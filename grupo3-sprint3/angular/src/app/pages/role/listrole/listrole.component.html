@@ -1,0 +1,60 @@
+<div class="list-role-main">
+    <app-header></app-header>
+    <div class="list-role">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="title text-center">
+                    <h1>Lista de Cargos</h1>
+                    <hr>
+                </div>
+
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="registries_table" class="display">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nivel de Acesso</th>
+                            <th>Açoes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entry of entries">
+                            <td>{{ entry.name }}</td>
+                            <td>{{ entry.accessLevel }}</td>
+                            <td>
+                                <button (click)="edit(entry.id)">Editar</button>
+                                <button (click)="selectId(entry)" data-bs-toggle="modal" data-bs-target="#delete_modal">Deletar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+
+    <div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Deleção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h4 *ngIf="selectedRole">Deseja realmente deletar o registro do {{selectedRole.name}}<span id="element_id"></span>?
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" (click)="delete()" class="btn btn-danger"
+                        data-bs-dismiss="modal">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

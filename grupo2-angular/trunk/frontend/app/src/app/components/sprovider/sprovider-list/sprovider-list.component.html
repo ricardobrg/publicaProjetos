@@ -1,0 +1,63 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="page-header">
+        <div class="page-actions d-flex">
+            <h1 class="h3 mb-2 text-gray-800">Prestadores de Serviço</h1>
+            <a routerLink="/sprovider-form">
+                <button class="btn btn-success btn-sm ml-1">Adicionar</button>
+            </a>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Prestador de Serviço</li>
+                <li class="breadcrumb-item active" aria-current="page">Listagem de Prestadores de Serviço</li>
+            </ol>
+        </nav>    
+    </div>
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Prestadores de serviço</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table datatable [dtTrigger]="dtTrigger" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Contato</th>
+                            <th>Enredeço</th>
+                            <th>CNPJ</th>
+                            <th>Razão Social</th>
+                            <th>Preço</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let sprovider of responseProviders">
+                            <td>{{sprovider.name}}</td>
+                            <td>{{sprovider.contact.phone}}</td>
+                            <td>{{sprovider.address.locality?sprovider.address.locality:'Nenhum'}}</td>
+                            <td>{{sprovider.cnpj}}</td>
+                            <td>{{sprovider.socialReason}}</td>
+                            <td>{{sprovider.price}}</td>
+                            <td>{{sprovider.description}}</td>
+                            <td>
+                                <a routerLink="/sprovider-edit/{{sprovider.id}}">
+                                    <i class="fas fa-edit mr-1 edit-icon"></i>
+                                </a>
+                                <i (click)="delete(sprovider.id)" class="fas fa-trash mr-1 delete-icon"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

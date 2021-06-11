@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: black;
+    background: #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  #wrapper {
+    margin-top: 5%;
+    width: 50vh;
+  }
+  
+  .each-point {
+    background: #fafafa;
+    width: 50vh;
+    height: 10vh;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+  }
+  
+  .data {
+    margin-top: 30px;
+    padding: 0;
+  }
+  
+  .nav-text {
+    margin: 0;
+    padding-left: 50px;
+    color: #fafafa;
+  }
+  
+  .float {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 50px;
+    right: 50px;
+    background-color: rgb(17, 105, 142);
+    color: #fafafa;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .my-float {
+    margin-top: 14px;
+    font-size: 2rem;
+  }
+  
+  .nav-icon {
+      position: relative;
+      top: 5px;
+      right: 10px;
+  }
+  
+  .nav-search {
+      color: #fafafa;
+  }
+  
+  /* Modal Styles */
+  
+  .modal .modal-dialog {
+      max-width: 500px;
+  }
+  .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+      padding: 10px 20px;
+  }
+  
+  .modal .modal-subheader {
+      padding: 20px 30px 0px 0px;
+  }
+  
+  .modal .modal-content {
+      border-radius: 3px;
+      font-size: 14px;
+  }
+  
+  .modal .modal-footer {
+      border-radius: 0 0 3px 3px;
+  }
+  
+  .modal .modal-subtitle {
+     color: #505050;
+  }
+  
+  .modal .modal-title, .modal .modal-subheader {
+      display: inline-block;
+  }
+  
+  .modal .btn {
+      border-radius: 15px;
+      min-width: 100px;
+      color: #fafafa;
+      width: 100%;
+      background-color: rgb(17, 105, 142);
+  }	
+  
+  input.btn.footer-btn {
+      margin-left: 20px;
+      width: 10vh;
+  }
+  
+  .form-control {
+      border-radius: 15px;
+  }

@@ -1,0 +1,3 @@
+{"socialReason":"Biscoiteria Ana LTDA","cnpj":"30600285000162","name":"Biscoiteria da Tia Ana","email":"tiaana@gmail.com","phone":"47991029444","id":0}
+{"socialReason":"ASASAS","cnpj":"95061793000165","phone":"9999999999","email":"buzzi.giovanni@outlook.com","name":"GASASA","endereco":{"id":0},"contact":{"id":0},"id":0}
+{"socialReason":"213231d","cnpj":"39196949000144","phone":"2222222222","email":"ola@ola.com","name":"OLA","endereco":{"id":0},"contact":{"id":0},"id":0}

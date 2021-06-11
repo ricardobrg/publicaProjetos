@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Colaborador do Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="CollaboratorCrud.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="crud.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="table-responsive">
+        <div class="table-wrapper">
+          <div class="table-title">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>Colaboradores</h2>
+              </div>
+              <div class="col-sm-6">
+                <a href="#addEmployeeModal" class="btn" data-toggle="modal"
+                  ><i class="material-icons">&#xE147;</i>
+                  <span>Adicionar Colaborador</span></a
+                >
+                <a href="#searchEmployeeModal" class="btn" data-toggle="modal"
+                  ><i class="material-icons">&#xe8b6;</i> <span>Buscar</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+                <th>Setor</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>1286810923</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>1286810923</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>1286810923</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>1286810923</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>1286810923</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Thomas Hardy da Silva Santos Pereira</td>
+                <td>128.681.092-53</td>
+                <td>emaildasilva@email.com</td>
+                <td>(47) 912345-6789</td>
+                <td>Pescador</td>
+                <td>Peixaria</td>
+                <td>
+                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Edit"
+                      >edit</i
+                    ></a
+                  >
+                  <a
+                    href="#deleteEmployeeModal"
+                    class="delete"
+                    data-toggle="modal"
+                    ><i
+                      class="material-icons"
+                      data-toggle="tooltip"
+                      title="Delete"
+                      >&#xE872;</i
+                    ></a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="clearfix">
+            <div class="hint-text">
+              Mostrando <b>5</b> de <b>25</b> colaboradores
+            </div>
+            <ul class="pagination">
+              <li class="page-item disabled"><a href="#">Anterior</a></li>
+              <li class="page-item"><a href="#" class="page-link">1</a></li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item active">
+                <a href="#" class="page-link">3</a>
+              </li>
+              <li class="page-item"><a href="#" class="page-link">4</a></li>
+              <li class="page-item"><a href="#" class="page-link">5</a></li>
+              <li class="page-item">
+                <a href="#" class="page-link">Próxima</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Modal HTML -->
+    <div id="addEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title"><b>Adicionar Colaborador</b></h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                &times;
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Dados Pessoais</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  maxlength="10"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Sobrenome</label>
+                <input type="" class="form-control" maxlength="30" required />
+              </div>
+              <div class="form-group">
+                <label>CPF</label>
+                <input
+                  type="number"
+                  class="form-control cpf-mask"
+                  maxlength="14"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>RG</label>
+                <input type="text" class="form-control" maxlength="7" />
+              </div>
+              <div class="form-group">
+                <label>Data de Nascimento</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Data de Admissão</label>
+                <input type="date" class="form-control" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label>Gênero</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Estado Civil</label>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Cargo</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>Cargo</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Salário</label>
+                <input type="number" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Turno</label>
+                <input type="text" class="form-control" required />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Contato</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Telefone</label>
+                <input type="phone" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Celular</label>
+                <input type="phone" class="form-control" />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle">Endereço:</h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>CEP</label>
+                <input type="number" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Cidade</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Bairro</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Logradouro</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Número</label>
+                <input type="number" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Complemento:</label>
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+                value="Cancelar"
+              />
+              <input type="submit" class="btn btn-success" value="Cadastrar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title"><b>Colaborador</b></h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                &times;
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle">Dados Pessoais</h5>
+              </div>
+              <hr class="hr-edit" />
+
+              <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Sobrenome</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>CPF</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>RG</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Data de Nascimento</label>
+                <input type="datetime" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Data de Admissão</label>
+                <input type="datetime" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Gênero</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Estado Civil</label>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Cargo</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>Cargo</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Salário</label>
+                <input type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Turno</label>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Contato</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Telefone</label>
+                <input type="phone" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Celular</label>
+                <input type="phone" class="form-control" />
+              </div>
+
+              <div class="modal-subheader">
+                <h5 class="modal-subtitle"><b>Endereço</b></h5>
+              </div>
+              <hr class="hr-edit" />
+              <div class="form-group">
+                <label>CEP</label>
+                <input type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Cidade</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Bairro</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Logradouro</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Número</label>
+                <input type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Complemento</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="modal-footer">
+                <input
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                  value="Cancelar"
+                />
+                <input type="submit" class="btn btn-info" value="Editar" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title">Deletar Colaborador</h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Você tem certeza que deseja deletar esse colaborador?</p>
+              <p class="text-warning">
+                <small>Essa ação não pode ser desfeita.</small>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <input
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+                value="Cancelar"
+              />
+              <input type="submit" class="btn btn-danger" value="Deletar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Search Modal HTML -->
+    <div id="searchEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                <div class="modal-header">
+                    <h4 class="modal-title"><b>Buscar Colaborador</b></h4>
+                    <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                    >
+                    &times;
+                </button>
+            </div>
+            
+                <div class="modal-body">
+                  <div class="modal-subheader">
+                    <h6 class="modal-subtitle">Digite o CPF do Colaborador:</h6>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      maxlength="14"
+                      required
+                    />
+                  </div>
+                </form>
+                <div class=".modal-footer-search" style="display: flex; justify-content: flex-end;">
+                    <input
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                      value="Cancelar"
+                    />
+                    <input type="submit" class="btn btn-primary" value="Buscar" />
+                  </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

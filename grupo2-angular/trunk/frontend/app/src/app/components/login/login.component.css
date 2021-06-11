@@ -1,0 +1,12 @@
+.container {
+    height: 100vh;
+}
+
+.row-login {
+    height: 100%;
+}
+
+.login-frame-image {
+    background: url('../../../assets/images/login-image.svg');
+    background-size: cover;
+}

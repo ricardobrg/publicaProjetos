@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Prestador de Serviços</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/headers.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/providers/edit.js"></script>
+
+</head>
+
+<body style="background-color: #4E4E4E; color: whitesmoke;">
+
+    <header>
+        <a href="../home.html">RH PÚBLICA</a>
+        <div class="logout">Olá, Pablo Raimundo
+            <a href="../login/auth.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white"
+                    class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                    <path fill-rule="evenodd"
+                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main class="container">
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-3">
+                <h1>Editar Prestador de Serviços</h1>
+                <hr>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+
+                <form class="w-50" onsubmit="editProvider()" method="dialog" id="formProvider">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="razaoSocial" class="form-label">Razão Social</label>
+                        <input type="text" class="form-control" id="razaoSocial" name="socialReason">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cnpj" class="form-label">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" name="cnpj">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" name="telephone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cep" name="cep">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-labeld">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <input type="text" class="form-control" id="descricao" name="description">
+                    </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary w-25">SALVAR</button>
+                        </div>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+    <div>
+    </div>
+    <div>
+    </div>
+    <footer>
+        <span>Grupo 3 © Proway - 2021</span>
+    </footer>
+
+</body>
+
+
+</html>

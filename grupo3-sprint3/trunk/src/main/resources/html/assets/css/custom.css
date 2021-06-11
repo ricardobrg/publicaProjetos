@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(0, 0, 93, 0.73)), url("../images/card-back.jpg");
+    background-size: cover;    
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.card {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    height: 200px;
+    width: 19%;
+    padding: .5rem 1rem;
+    margin: 3rem 3rem;
+    background-image: url("../images//back-card2.jpg");
+    opacity: 0.8;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: flex-start;
+    color: black;
+    box-shadow: 4px 3px black;
+    transition: background-color .5s;
+}
+
+.card-menu a:hover{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.card-menu {
+    max-height: 0;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.card-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-menu li {
+    padding: .3rem 0;
+}
+
+.card-menu ul{
+    list-style-type: circle;
+}
+
+.card:hover .card-menu {
+    max-height: 100px;
+    transition: max-height .8s;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card:hover {
+    opacity: 1;
+    width: 30%;
+    transition: ease-in .2s;
+    background-color: #000;
+    font-weight: 600;
+    box-shadow: 10px 10px black;
+}

@@ -1,0 +1,35 @@
+<div class="register-role-main">
+    <app-header></app-header>
+    <div class="register-role">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-4">
+                    <h1>Registrar Cargo</h1>
+                    <hr>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="w-100" id="roleForm" [formGroup]="roleForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="name" id="name" formControlName="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="accessLevel" class="form-label">Nivel de Acesso</label>
+                            <select class="w-75" name="accessLevel" id="accessLevel" formControlName="accessLevel">
+                                <option value="BASIC" default>Basico</option>
+                                <option value="MEDIUM" default>Médio</option>
+                                <option value="TOTAL" default>Total</option>
+                            </select>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button (click)="onSubmit()" type="submit" class="btn btn-primary">GERAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

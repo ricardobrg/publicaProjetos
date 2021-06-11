@@ -1,0 +1,36 @@
+.container_form{
+    text-align: center;
+}
+
+.alinhar{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.alinhar img{
+    margin-right: 2%;
+    margin-bottom:1%;
+}
+
+.input_form input{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+
+}
+
+.input_form input[type="text"]{
+    padding-left: 2%;
+    text-align: left;
+    border-color:rgb(105, 103, 103);
+    border-style: solid;
+}
+
+.input_form input[type="text"]:focus{
+    outline: none;
+}
+
+
+

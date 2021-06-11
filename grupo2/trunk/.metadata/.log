@@ -1,0 +1,54 @@
+!SESSION 2020-11-09 15:41:08.959 -----------------------------------------------
+eclipse.buildId=4.17.0.I20200902-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2020-11-09 15:41:23.128
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-11-09 15:41:23.128
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78bd02c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28dacf31,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-11-09 15:41:30.366
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'P:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2020-11-09 15:56:09.373
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\publica\eclipse\java-2020-092\eclipse\configuration\org.eclipse.osgi\429\0\.cp\lib\testng-remote.jar C:\Users\publica\eclipse-workspace5\MainAplicacao\bin C:\Users\publica\.p2\pool\plugins\org.testng_7.3.0.r202008060316.jar C:\Users\publica\.p2\pool\plugins\com.beust.jcommander_1.78.0.jar C:\Users\publica\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar C:\Users\publica\.p2\pool\plugins\org.yaml.snakeyaml_1.21.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52163 -protocol json -d C:\Users\publica\eclipse-workspace5\MainAplicacao\test-output C:\Users\publica\AppData\Local\Temp\testng-eclipse--1395302129\testng-customsuite.xml
+java -ea -classpath C:\Users\publica\eclipse\java-2020-092\eclipse\configuration\org.eclipse.osgi\429\0\.cp\lib\testng-remote.jar:C:\Users\publica\eclipse-workspace5\MainAplicacao\bin:C:\Users\publica\.p2\pool\plugins\org.testng_7.3.0.r202008060316.jar:C:\Users\publica\.p2\pool\plugins\com.beust.jcommander_1.78.0.jar:C:\Users\publica\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar:C:\Users\publica\.p2\pool\plugins\org.yaml.snakeyaml_1.21.0.jar org.testng.remote.RemoteTestNG -serport 52163 -protocol json -d C:\Users\publica\eclipse-workspace5\MainAplicacao\test-output C:\Users\publica\AppData\Local\Temp\testng-eclipse--1395302129\testng-customsuite.xml
+
+!ENTRY org.eclipse.ui.ide 4 4 2020-11-09 15:58:08.498
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2020-11-09 15:58:08.499
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-11-09 15:58:08.499
+!MESSAGE The project description file (.project) for 'MainAplicacao' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-11-09 15:58:08.673
+!MESSAGE The workspace will exit with unsaved changes in this session.

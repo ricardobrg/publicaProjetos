@@ -1,0 +1,141 @@
+<div class="list-collab-main">
+    <app-header></app-header>
+    <div class="list-collab">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="title text-center">
+                    <h1>Lista de Colaboradores</h1>
+                    <hr>
+                </div>
+
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="registries_table" class="display">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Salario</th>
+                            <th>Açoes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entry of entries">
+                            <td>{{ entry.name }}</td>
+                            <td>{{ entry.cpf }}</td>
+                            <td>{{ entry.salary }}</td>
+                            <td>
+                                <button (click)="edit(entry.id)">Editar</button>
+                                <button (click)="selectId(entry)" data-bs-toggle="modal"
+                                    data-bs-target="#delete_modal">Deletar</button>
+                                <button (click)="selectId(entry)" data-bs-toggle="modal" data-bs-target="#data_modal">Ver Mais</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Deleção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h4 *ngIf="selectedCollab">Deseja realmente deletar o registro do {{selectedCollab.name}}<span
+                                id="element_id"></span>?
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" (click)="delete()" class="btn btn-danger"
+                        data-bs-dismiss="modal">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="data_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Dados do Colaborador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="data_modal_table" *ngIf="selectedCollab">
+                        <tr>
+                            <th>Nome</th>
+                            <td>{{selectedCollab.name}}</td>
+                        </tr>
+                        <tr>
+                            <th>CPF</th>
+                            <td>{{selectedCollab.cpf}}</td>
+                        </tr>
+                        <tr>
+                            <th>Pis</th>
+                            <td>{{selectedCollab.pis}}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{selectedCollab.contact.email}}</td>
+                        </tr>
+                        <tr>
+                            <th>Telefone</th>
+                            <td>{{selectedCollab.contact.telephone}}</td>
+                        </tr>
+                        <tr>
+                            <th>Cargo</th>
+                            <td>{{selectedCollab.role["name"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Salário</th>
+                            <td>{{selectedCollab.salary}}</td>
+                        </tr>
+                        <tr>
+                            <th>Carga Horária</th>
+                            <td>{{selectedCollab.workHours}}</td>
+                        </tr>
+                        <tr>
+                            <th>Data de Admissão</th>
+                            <td>{{selectedCollab.admissionDate}}</td>
+                        </tr>
+                        <tr>
+                            <th>Últimas Férias</th>
+                            <td>{{selectedCollab.lastVacationDate}}</td>
+                        </tr>
+                        <tr>
+                            <th>CEP</th>
+                            <td>{{selectedCollab.endereco["cep"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Cidade</th>
+                            <td>{{selectedCollab.endereco["localidade"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Bairro</th>
+                            <td>{{selectedCollab.endereco["bairro"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Logradouro</th>
+                            <td>{{selectedCollab.endereco["logradouro"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Complemento</th>
+                            <td>{{selectedCollab.endereco["complemento"]}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

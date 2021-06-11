@@ -1,0 +1,65 @@
+:root{
+    --color-background-nav:#475ec4;
+    --color-hover:#9aa1fa;
+    --color-container:#efefef;
+    --color-table:#d8dfec;
+    font-family: Questrial;
+}
+
+/* Menu nav */
+.sidebar{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(65, 122, 207);
+    overflow-x: hidden;
+
+}
+
+.sidebar ul {
+    list-style-type:none;
+    padding-top: 30px;
+}
+
+.sidebar li {
+    padding-top: 30px;
+}
+
+.sidebar a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color:white;
+}
+
+/* Menu nav */
+
+
+header{
+    text-align: right;
+}
+
+footer{
+    text-align: center;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.back img{
+    margin-top: 15%;
+}
+

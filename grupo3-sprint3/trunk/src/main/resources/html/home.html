@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | RH Pública</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/headers.css">
+    <link rel="stylesheet" href="./assets/css/info_modal.css">
+
+    <script src="./assets/js/payroll/list.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script defer src="./assets/js/work_entries/list.js"></script>
+    <script defer src="./assets/js/work_entries/register.js"></script>
+    <script defer src="./assets/js/vacation/vacation.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="">RH PÚBLICA</a>
+        <div class="logout">
+            <h3 id="name">Olá, Pablo Raimundo</h3>
+            <a href="./login/auth.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" class="bi bi-box-arrow-left"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                    <path fill-rule="evenodd"
+                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="card" id="collaborators">
+            <h1>Colaborador</h1>
+            <ul class="card-menu">
+                <a href="./collaborators/register.html" id="collaborators-register">
+                    <li>Cadastrar</li>
+                </a>
+                <a href="./collaborators/list.html" id="collaborators-list">
+                    <li>Listar</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="card" id="roles">
+            <h1>Cargo</h1>
+            <ul class="card-menu">
+                <a href="./roles/register.html" id="roles-register">
+                    <li>Cadastrar</li>
+                </a>
+                <a href="./roles/list.html" id="roles-list">
+                    <li>Listar</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="card" id="services">
+            <h1>Prestador de Serviço</h1>
+            <ul class="card-menu">
+                <a href="./providers/register.html" id="services-register">
+                    <li>Cadastrar</li>
+                </a>
+                <a href="./providers/list.html" id="collaborators-cadastro">
+                    <li>Listar</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="card" id="payrolls">
+            <h1>Folha de Pagamento</h1>
+            <ul class="card-menu">
+                <a href="./payrolls/generation.html" id="payrolls-register">
+                    <li>Gerar</li>
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#listarFolha" id="vacations-check">
+                    <li>Listar</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="card" id="vacations">
+            <h1>Controle de Férias</h1>
+            <ul class="card-menu">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#buscarFerias" id="vacations-check">
+                    <li>Checar Férias</li>
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#confirmarFerias" id="vacations-entry">
+                    <li>Entrar em Férias</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="card" id="point">
+            <h1>Controle de Ponto</h1>
+            <ul class="card-menu">
+                <a href="#" onclick="confirmEntry()" data-bs-toggle="modal" data-bs-target="#baterPonto"
+                    id="point-entry">
+                    <li>Bater Ponto</li>
+                </a>
+                <a href="./work_entries/search.html" data-bs-toggle="modal" data-bs-target="#searchPoints"
+                    id="point-search">
+                    <li>Listar</li>
+                </a>
+            </ul>
+        </div>
+
+    </main>
+    <footer>
+        <span>Grupo 3 © Proway - 2021</span>
+    </footer>
+
+    <div class="modal fade" id="buscarFerias" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Situação de Férias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="verifyVacationForm" action="#" method="dialog" onsubmit="verifyVacation()">
+                            <label for="cpf" class="mt-2">CPF</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control">
+
+                            <label for="date" class="mt-2">Data</label>
+                            <input type="date" name="date" id="date" class="form-control">
+
+                            <input type="submit" class="mt-3 btn btn-primary" value="Buscar" data-bs-toggle="modal"
+                                data-bs-target="#situacaoFerias">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="situacaoFerias" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Situação de Férias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table id="data_modal_table">
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmarFerias" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Férias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="confirmVacationForm" action="#" method="dialog" onsubmit="confirmVacation()">
+                            <label for="cpf" class="mt-2">CPF</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control">
+
+                            <label for="date" class="mt-2">Data de Saída</label>
+                            <input type="date" name="date" id="date" class="form-control">
+
+                            <input type="submit" class="mt-3 btn btn-primary" value="Confirmar" data-bs-toggle="modal"
+                                data-bs-target="#vacationReturn">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="vacationReturn" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Férias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h5 id="vacationMsg" class="text-center"></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchPoints" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Listagem de Pontos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form action="#" method="post" id="formWorkEntry" onsubmit="searchPoint(event)">
+                            <label for="cpf" class="mt-2">CPF</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control">
+
+                            <label for="date" class="mt-2">Data Inicial</label>
+                            <input type="date" name="initial-date" id="date" class="form-control">
+
+                            <label for="date" class="mt-2">Data Final</label>
+                            <input type="date" name="final-date" id="date" class="form-control">
+
+                            <input type="submit" class="mt-3 btn btn-primary" value="Buscar">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="listarFolha" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Listar Folhas de Pagamento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form onsubmit="listarFolhas(this)" method="dialog" id="formPayroll">
+                            <label for="cpf" class="mt-2">CPF</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control">
+                            <input type="submit" class="mt-3 btn btn-primary" value="Confirmar">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="baterPonto" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Bater Ponto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h5 class="text-center">Ponto Registrado Às <strong><span id="entry"></span></strong></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

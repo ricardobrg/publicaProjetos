@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "../../css/indexStyle.css">
+    <link rel= "stylesheet" type= "text/css" href= "../../css/style.css">
+    <link rel= "stylesheet" type= "text/css" href= "../../css/form-style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">  
+    <title>Cargos</title>
+</head>
+<body>
+    
+    
+    <div class = "sidebar">
+        <h2>Sistema RH</h2>
+        <ul>
+            <li><a href="..\collaborator\collaborator_list.html">Colaboradores</a></li>
+            <li><a href="../department/departments.html">Departamentos</a></li>
+            <li><a href="../serviceprovider/serviceprovider-list.html">Prestadores de Serviço</a></li>
+            <li><a href="#vacation">Controle de Férias</a></li>
+            <li><a href="../point/points.html">Controle de Ponto </a></li>
+            <li><a href="../payroll/payroll.html">Folhas de Pagamento</a></li>
+            <li><a href="../roles/role-list.html">Cargos</a></li>
+        </ul>
+        <div class = "center">
+            <img src = "../img/back.png">
+        </div>
+    </div>
+    
+    <main>
+        <header>
+            <p>user_name</p>
+        </header>
+        <div class="page-content">
+            <header>
+                <h1>Cadastro de Cargo</h1>
+                <div>
+                    <button>Salvar</button>
+                    <button>Cancelar</button>
+                </div>
+            </header>    
+            <div class="page-form">
+                
+                <input type="text" placeholder="Nome" id="">
+                <input type="number" placeholder="Salário" id="">
+                <label for="cars">Selecione um Nível de Acesso</label>
+                
+                <select name="cars" id="cars">
+                    <option value="1">Básico</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Administrador</option>
+                    <option value="4">Total</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <footer> Copyright @ Sistema RH 2020</footer>
+    </main>
+</body>
+</html>

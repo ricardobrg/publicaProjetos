@@ -1,0 +1,125 @@
+<div class="list-provider-main">
+    <app-header></app-header>
+    <div class="list-provider">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="title text-center">
+                    <h1>Lista de Prestadores de Serviço</h1>
+                    <hr>
+                </div>
+
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="registries_table" class="display">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CNPJ</th>
+                            <th>Descrição</th>
+                            <th>Açoes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entry of entries">
+                            <td>{{ entry.name }}</td>
+                            <td>{{ entry.cnpj }}</td>
+                            <td>{{ entry.description }}</td>
+                            <td>
+                                <button (click)="edit(entry.id)">Editar</button>
+                                <button (click)="selectId(entry)" data-bs-toggle="modal" data-bs-target="#delete_modal">Deletar</button>
+                                <button (click)="selectId(entry)" data-bs-toggle="modal" data-bs-target="#data_modal">Ver Mais</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Deleção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h4 *ngIf="selectedProvider">Deseja realmente deletar o registro do {{selectedProvider.name}}<span id="element_id"></span>?
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" (click)="delete()" class="btn btn-danger"
+                        data-bs-dismiss="modal">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="data_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Dados do Provedor de Servico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="data_modal_table" *ngIf="selectedProvider">
+                        <tr>
+                            <th>Nome</th>
+                            <td>{{selectedProvider.name}}</td>
+                        </tr>
+                        <tr>
+                            <th>CNPJ</th>
+                            <td>{{selectedProvider.cnpj}}</td>
+                        </tr>
+                        <tr>
+                            <th>Razao Social</th>
+                            <td>{{selectedProvider.socialReason}}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{selectedProvider.contact.email}}</td>
+                        </tr>
+                        <tr>
+                            <th>Telefone</th>
+                            <td>{{selectedProvider.contact.telephone}}</td>
+                        </tr>
+                        <tr>
+                            <th>Descricao</th>
+                            <td>{{selectedProvider.description}}</td>
+                        </tr>
+                        <tr>
+                            <th>CEP</th>
+                            <td>{{selectedProvider.endereco["cep"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Cidade</th>
+                            <td>{{selectedProvider.endereco["localidade"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Bairro</th>
+                            <td>{{selectedProvider.endereco["bairro"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Logradouro</th>
+                            <td>{{selectedProvider.endereco["logradouro"]}}</td>
+                        </tr>
+                        <tr>
+                            <th>Complemento</th>
+                            <td>{{selectedProvider.endereco["complemento"]}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

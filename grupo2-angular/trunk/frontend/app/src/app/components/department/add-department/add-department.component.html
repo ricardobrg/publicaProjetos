@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Departamentos</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex" id="form-header">
+            <h5 class="m-0 font-weight-bold text-primary">Cadastro de Departamento</h5>
+            <div>
+                <button type="button" (click)="saveForm()" class="btn btn-success">
+                    Salvar
+                </button>
+                <a routerLink="/department-list">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="form">
+                <h3>Dados Pessoais</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" formControlName="name" placeholder="Nome">
+                    </div>
+                </div>                    
+            </form>
+        </div>
+    </div>
+
+</div>
+

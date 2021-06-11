@@ -1,0 +1,16 @@
+.signin {
+    /*font-family: 'Roboto', sans-serif;*/
+    background-image: url("../../../assets/images/bg-login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login {
+    height: 95%;
+}
+
+.login div:first-child {
+    margin-top: -30%;
+    margin-left: 1rem;
+}
